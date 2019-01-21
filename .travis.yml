@@ -1,0 +1,57 @@
+language: java
+matrix:
+  include:
+    - os: osx
+      name: gradle 4.3
+      install:
+        - curl -s "https://get.sdkman.io" | bash
+        - source ~/.bash_profile
+        - sdk install gradle 4.3
+      script:
+        - test.sh
+    - os: osx
+      name: gradle 4.10
+      install:
+        - curl -s "https://get.sdkman.io" | bash
+        - source ~/.bash_profile
+        - sdk install gradle 4.10
+      script:
+        - test.sh
+    - os: osx
+      name: gradle 5
+      install:
+        - curl -s "https://get.sdkman.io" | bash
+        - source ~/.bash_profile
+        - sdk install gradle 5
+      script:
+        - test.sh
+    - os: linux
+      name: gradle 4.3
+      sudo: required
+      dist: trusty
+      install:
+        - curl -s "https://get.sdkman.io" | bash
+        - source ~/.bash_profile
+        - sdk install gradle 4.3
+      script:
+        - test.sh
+    - os: linux
+      name: gradle 4.10
+      sudo: required
+      dist: trusty
+      install:
+        - curl -s "https://get.sdkman.io" | bash
+        - source ~/.bash_profile
+        - sdk install gradle 4.10
+      script:
+        - test.sh
+    - os: linux
+      name: gradle 5
+      sudo: required
+      dist: trusty
+      install:
+        - curl -s "https://get.sdkman.io" | bash
+        - source ~/.bash_profile
+        - sdk install gradle 5
+      script:
+        - test.sh
