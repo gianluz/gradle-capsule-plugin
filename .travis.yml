@@ -22,7 +22,7 @@ matrix:
       install:
         - curl -s "https://get.sdkman.io" | bash
         - source ~/.bash_profile
-        - sdk install gradle 5
+        - sdk install gradle 5.0
       script:
         - test.sh
     - os: linux
@@ -52,6 +52,6 @@ matrix:
       install:
         - curl -s "https://get.sdkman.io" | bash
         - source ~/.bash_profile
-        - sdk install gradle 5
+        - sdk install gradle 5.0
       script:
         - test.sh
