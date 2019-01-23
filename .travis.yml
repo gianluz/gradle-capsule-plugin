@@ -1,0 +1,19 @@
+language: java
+matrix:
+  include:
+    - os: osx
+      install:
+        - curl -s "https://get.sdkman.io" | bash
+        - source ~/.bash_profile
+        - sdk install gradle
+      script:
+        - ./test.sh
+    - os: linux
+      sudo: required
+      dist: trusty
+      install:
+        - curl -s "https://get.sdkman.io" | bash
+        - source ~/.bash_profile
+        - sdk install gradle
+      script:
+        - ./test.sh
